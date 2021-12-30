@@ -1,0 +1,78 @@
+.Projects {
+    height: 100vh;
+
+    .section {
+        display: flex;
+        flex-direction: right;
+
+        width: 50%;
+    }
+
+    .square {
+        width: 100%;
+        padding-bottom: 100%;
+        // padding-bottom: 20%;
+        background-color: white;
+
+        overflow: hidden;
+
+        .description {
+            background-color: rgba(0, 0, 0, 0);
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            transform: translate(0, 50%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            z-index: 2;
+            transition: 1s;
+
+            h1 {
+                color: rgba(255, 255, 255, 0);
+            }
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+
+            transform: translate(0, 50%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                transform: translate(0%, 0%);
+
+                width: 800px;
+                height: 600px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                // left: 0;
+                right: 0;
+            }
+        }
+        &:hover .description {
+            background-color: rgba(0, 0, 0, 0.25);
+
+            h1 {
+                color: rgba(255, 255, 255, 1);
+
+                transition: 1s;
+            }
+            transition: 1s;
+        }
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+    }
+}

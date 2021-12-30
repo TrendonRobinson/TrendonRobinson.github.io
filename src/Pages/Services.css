@@ -1,0 +1,51 @@
+.Services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Services .service-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Services .service-cards div {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  margin: 0px 100px;
+  margin-bottom: 50px;
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  text-align: center;
+  padding: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Services .service-cards div p {
+  margin-top: auto;
+  justify-self: baseline;
+}
+/*# sourceMappingURL=Services.css.map */

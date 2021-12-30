@@ -1,0 +1,46 @@
+.Services {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    justify-self: center;
+    justify-content: center;
+
+    // background-color: white;
+
+    .service-cards {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        div {
+            background: none;
+            border: 2px solid white;
+            color: white;
+            margin: 0px 100px;
+            margin-bottom: 50px;
+            width: 300px;
+            height: 300px;
+            min-width: 300px;
+
+            text-align: center;
+
+            padding: 0px 10px;
+
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+
+            .icon {
+            }
+
+            p {
+                margin-top: auto;
+                justify-self: baseline;
+            }
+        }
+    }
+}

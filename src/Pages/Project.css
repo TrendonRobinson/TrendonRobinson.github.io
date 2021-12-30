@@ -1,0 +1,91 @@
+.Projects {
+  height: 100vh;
+}
+
+.Projects .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: right;
+          flex-direction: right;
+  width: 50%;
+}
+
+.Projects .square {
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.Projects .square .description {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.Projects .square .description h1 {
+  color: rgba(255, 255, 255, 0);
+}
+
+.Projects .square .image {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Projects .square .image img {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.Projects .square:hover .description {
+  background-color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.Projects .square:hover .description h1 {
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.Projects h1 {
+  text-align: center;
+  color: white;
+}
+/*# sourceMappingURL=Project.css.map */

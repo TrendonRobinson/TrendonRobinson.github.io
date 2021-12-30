@@ -1,0 +1,71 @@
+.Home {
+    background: none;
+    width: 100%;
+    height: 100vh;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+
+        padding: 50px 50px;
+        height: 80%;
+
+        background: none;
+
+        .column {
+            // border: 1px solid white;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skill-desc {
+            margin-top: auto;
+            justify-self: baseline;
+            color: white;
+
+            h4 {
+            }
+
+            p {
+                overflow-wrap: break-word;
+            }
+        }
+
+        #item1 {
+        }
+
+        #item2 {
+            // grid-column: 2;
+        }
+
+        #item3 {
+            // grid-column: 3;
+            h1 {
+                margin-left: auto;
+                font-size: 50px;
+            }
+        }
+
+        h1 {
+            margin: 0;
+            color: white;
+            font-size: 120px;
+        }
+
+        button {
+            background: none;
+
+            border: 1px solid white;
+            color: white;
+            padding: 10px 5px;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background: white;
+            color: red;
+            transition: 0.5s;
+        }
+    }
+}
