@@ -19,12 +19,12 @@ export default function NavBar() {
                     <LogoDevIcon/>
                 </div>
                 <div className="Links">
-                    <div className="Link-Container"><Link id="HomeLink" to="/portfolio">Home</Link></div>
-                    <div className="Link-Container"><Link to="/portfolio/projects">Projects</Link></div>
-                    <div className="Link-Container"><Link to="/portfolio/services">Services</Link></div>
-                    <div className="Link-Container"><Link to="/portfolio/about">About</Link></div>
-                    <div className="Link-Container"><Link to="/portfolio/skills">Skills</Link></div>
-                    <div className="Link-Container"><Link to="/portfolio/contact">Contact</Link></div>
+                    <div className="Link-Container"><Link id="HomeLink" to="/">Home</Link></div>
+                    <div className="Link-Container"><Link to="/projects">Projects</Link></div>
+                    <div className="Link-Container"><Link to="/services">Services</Link></div>
+                    <div className="Link-Container"><Link to="/about">About</Link></div>
+                    <div className="Link-Container"><Link to="/skills">Skills</Link></div>
+                    <div className="Link-Container"><Link to="/contact">Contact</Link></div>
                 </div>
                 <div className="Socials">
 

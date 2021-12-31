@@ -16,10 +16,10 @@ import NavBar from './Components/NavBar'
 
 const App = () => {
   let routes = useRoutes([
-    { path: "/portfolio", element: <Home /> },
-    { path: "/portfolio/projects", element: <Projects /> },
-    { path: "/portfolio/services", element: <Services /> },
-    { path: "/portfolio/contact", element: <Contact /> }
+    { path: "/", element: <Home /> },
+    { path: "/projects", element: <Projects /> },
+    { path: "/services", element: <Services /> },
+    { path: "/contact", element: <Contact /> }
   ]);
   return routes;
 };
