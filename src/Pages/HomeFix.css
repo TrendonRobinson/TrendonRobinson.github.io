@@ -1,0 +1,116 @@
+.Home {
+  color: white;
+}
+
+.Home button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.Home button:hover {
+  background: white;
+  color: red;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  /* Styles */
+  .Home {
+    padding: 0px 20px;
+  }
+  .Home #title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: white;
+  }
+  .Home #title .name {
+    padding: 5vh 0px;
+  }
+  .Home #title .name h1 {
+    font-size: 20vw;
+    margin: 0px;
+  }
+  .Home #title .name-logo {
+    display: none;
+  }
+  .Home button {
+    width: 100%;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) {
+  /* Styles */
+  .Home {
+    padding: 0px 40px;
+    height: 90vh;
+  }
+  .Home #title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .Home #title h1 {
+    font-size: 12vw;
+    margin: 0px;
+    -webkit-filter: drop-shadow(5px 7px 2px rgba(0, 0, 0, 0.282));
+            filter: drop-shadow(5px 7px 2px rgba(0, 0, 0, 0.282));
+  }
+  .Home #title .name-logo h1 {
+    font-size: 5vw;
+    margin-top: 2.25vw;
+    -webkit-filter: none;
+            filter: none;
+  }
+  .Home .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+  .Home .Items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    height: auto;
+  }
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
+/*# sourceMappingURL=HomeFix.css.map */

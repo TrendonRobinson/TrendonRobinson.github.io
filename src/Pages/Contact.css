@@ -8,10 +8,49 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 85vh;
+}
+
+.Contact .form {
+  padding: 0px 20px;
+}
+
+.Contact .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.Contact .contact-info ul {
+  list-style: none;
+  color: white;
+  font-size: 1.5vw;
+}
+
+.Contact .contact-info ul svg {
+  font-size: 40px;
+}
+
+.Contact .contact-info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 20px;
 }
 
 .Contact h3 {
@@ -25,5 +64,29 @@
 
 .Contact button:hover {
   background-color: #c70000;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+  .Contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 50px;
+  }
+  .Contact .contact-info ul {
+    list-style: none;
+    color: white;
+    font-size: 5vw;
+  }
 }
 /*# sourceMappingURL=Contact.css.map */

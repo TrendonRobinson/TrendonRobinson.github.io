@@ -12,13 +12,14 @@ import Contact from './Pages/Contact'
 
 import Home from './Pages/Home'
 
-import NavBar from './Components/NavBar'
+// import NavBar from './Components/NavBar'
+import NavBar from './Components/NavbarBTS'
 
 const App = () => {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/projects", element: <Projects /> },
-    { path: "/services", element: <Services /> },
+    // { path: "/services", element: <Services /> },
     { path: "/contact", element: <Contact /> }
   ]);
   return routes;

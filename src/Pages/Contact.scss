@@ -2,7 +2,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    height: 85vh;
+
+    .form {
+        padding: 0px 20px;
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+
+        ul {
+            list-style: none;
+            color: white;
+            font-size: 1.5vw;
+            // margin-left: 5vw;
+
+            svg {
+                font-size: 40px;
+            }
+
+            li {
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                // padding-left: 13vw;
+                padding-bottom: 20px;
+            }
+        }
+    }
 
     h3 {
         margin-top: 5%;
@@ -14,6 +43,24 @@
 
         &:hover {
             background-color: rgb(199, 0, 0);
+        }
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 768px) {
+    .Contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 50px;
+
+        .contact-info {
+            ul {
+                list-style: none;
+                color: white;
+                font-size: 5vw;
+            }
         }
     }
 }

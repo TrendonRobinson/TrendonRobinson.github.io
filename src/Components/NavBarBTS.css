@@ -1,0 +1,17 @@
+nav a {
+  color: white;
+}
+
+.Color {
+  color: white;
+}
+
+.container {
+  color: white;
+}
+
+.bg-light {
+  --bs-bg-opacity: 0;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+/*# sourceMappingURL=NavBarBTS.css.map */
