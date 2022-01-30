@@ -9,7 +9,7 @@ function Home() {
 
     useEffect(() => {
         // let Home = document.getElementById('HomeLink').parentElement
-        // Home.classList.add("active");
+        // Home.classList.add("active"); test
     }, [])
 
     return (
