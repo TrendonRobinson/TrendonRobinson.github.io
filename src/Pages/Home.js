@@ -31,7 +31,7 @@ function Home() {
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={{
-                    fpsLimit: 30,
+                    fpsLimit: 60,
                     interactivity: {
                     events: {
                         onClick: {
