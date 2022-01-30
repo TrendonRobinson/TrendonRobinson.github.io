@@ -2,6 +2,14 @@ nav a {
   color: white;
 }
 
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
 .Color {
   color: white;
 }

@@ -33,33 +33,36 @@ function Home() {
                 <div className='Items'>
                     <div id="item1" className='column'>
                         <div className='skill-desc'>
-                            <button>
-                                Web Developer
-                            </button>
+                            <h5>
+                                About
+                            </h5>
                             <p>
-                                A strong front-end developer with the
-                                experience to develop a quality full stack application.
+                                Jr Web Developer 2018 <br/>
+                                Graphic Designer 2018 <br/>
+                                Game Developer 2012 <br/>
                             </p>
                         </div>
                     </div>
                     <div id="item2" className='column'>
                         <div className='skill-desc'>
-                            <button>
-                                Graphic Designer
-                            </button>
+                            <h5>
+                                Contact
+                            </h5>
                             <p>
-                                Over the course of 5 years.
-                                I've designed game ui, graphics for colleges, and websites for personal and team projects.
+                                Trendonrobinson@gmail.com <br/>
+                                +1 (470) 304 7418
                             </p>
                         </div>
                     </div>
                     <div id="item3" className='column'>
                         <div className='skill-desc'>
-                            <button>
-                                Game Developer
-                            </button>
+                            <h5>
+                                Information
+                            </h5>
                             <p>
-                                I am offering my services as a scripter. With 9 years to back my skill, I specialize in front-end programming.
+                                https://gist.github.com/TrendonRobinson <br/>
+                                https://twitter.com/TPr0fessor/media <br/>
+                                https://devforum.roblox.com/t/thepr0fessors-portforlio <br/>
                             </p>
                         </div>
                     </div>
