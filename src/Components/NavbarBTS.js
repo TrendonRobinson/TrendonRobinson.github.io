@@ -17,13 +17,13 @@ export default function NavBar() {
     return (
         <Nav className="justify-content-center" activeKey="/home">
             <Nav.Item>
-                <Nav.Link href="/">Home</Nav.Link>
+                <Link id="HomeLink" to="/">Home</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/projects" eventKey="link-1">Projects</Nav.Link>
+                <Link to="/projects">Projects</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/contact" eventKey="link-2">Contacts</Nav.Link>
+                <Link to="/contact">Contact</Link>
             </Nav.Item>
         </Nav>
     )
