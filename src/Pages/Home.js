@@ -1,164 +1,91 @@
-import './HomeFix.css';
+import { style } from "@mui/system";
+import React from "react";
+import styled from "styled-components";
 
-import { useEffect } from 'react';
-import { useLocation } from "react-router-dom";
+// Components
+import Nav from "../Components/Nav";
 
-import Particles from "react-tsparticles";
+// Sections
+import Works from "../Components/Works"
 
-function Home() {
 
-    let location = useLocation();
-
-    useEffect(() => {
-        // let Home = document.getElementById('HomeLink').parentElement
-        // Home.classList.add("active"); test
-    }, [])
-
-    const particlesInit = (main) => {
-        console.log(main);
-    
-        // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-      };
-    
-      const particlesLoaded = (container) => {
-        console.log(container);
-      };
-
+export default function Home() {
     return (
-        <div className="Home">
-            <Particles
-                id="tsparticles"
-                init={particlesInit}
-                loaded={particlesLoaded}
-                options={{
-                    fpsLimit: 60,
-                    interactivity: {
-                    events: {
-                        onClick: {
-                        enable: false,
-                        mode: "push",
-                        },
-                        onHover: {
-                        enable: false,
-                        mode: "attract",
-                        },
-                        resize: true,
-                    },
-                    modes: {
-                        bubble: {
-                        distance: 400,
-                        duration: 2,
-                        opacity: 0.8,
-                        size: 40,
-                        },
-                        push: {
-                        quantity: 4,
-                        },
-                        repulse: {
-                        distance: 200,
-                        duration: 0.4,
-                        },
-                    },
-                    },
-                    particles: {
-                    color: {
-                        value: "#ffffff",
-                    },
-                    links: {
-                        color: "#ffffff",
-                        distance: 150,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 1,
-                    },
-                    collisions: {
-                        enable: true,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outMode: "bounce",
-                        random: false,
-                        speed: 2,
-                        straight: false,
-                    },
-                    number: {
-                        density: {
-                        enable: true,
-                        area: 800,
-                        },
-                        value: 40,
-                    },
-                    opacity: {
-                        value: 0.5,
-                    },
-                    shape: {
-                        type: "circle",
-                    },
-                    size: {
-                        random: true,
-                        value: 5,
-                    },
-                    },
-                    detectRetina: true,
-                }}
-                />
-            <div className="grid">
-                <div id='title' className='title'>
-                    <div className='name'>
-                        <h1>
-                            Trendon
-                        </h1>
-                        <h1>
-                            Robinson
-                        </h1>
-                    </div>
-                    <div className='name-logo'>
-                        <h1>
-                            {'<T/R>'}
-                        </h1>
-                    </div>
-                </div>
-                <div className='Items'>
-                    <div id="item1" className='column'>
-                        <div className='skill-desc'>
-                            <h5>
-                                About
-                            </h5>
-                            <p>
-                                Jr Web Developer 2018 <br/>
-                                Graphic Designer 2018 <br/>
-                                Game Developer 2012 <br/>
-                            </p>
-                        </div>
-                    </div>
-                    <div id="item2" className='column'>
-                        <div className='skill-desc'>
-                            <h5>
-                                Contact
-                            </h5>
-                            <p>
-                                Trendonrobinson@gmail.com <br/>
-                                +1 (470) 304 7418
-                            </p>
-                        </div>
-                    </div>
-                    <div id="item3" className='column'>
-                        <div className='skill-desc'>
-                            <h5>
-                                Information
-                            </h5>
-                            <p>
-                                https://gist.github.com/TrendonRobinson <br/>
-                                https://twitter.com/TPr0fessor/media <br/>
-                                https://devforum.roblox.com/t/thepr0fessors-portforlio <br/>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Container className="Home">
+            <IntroContainer>
+                <NameContainer>
+                    <Nav />
+                    <LargeText>
+                        Trendon
+                        <br />
+                        Robinson
+                    </LargeText>
+                </NameContainer>
+                <BioContainer>
+                    <Name>TRENDON/R.</Name>
+                    <LightText>{"/THIS IS ME"}</LightText>
+                    <Bio>Experience designer and developer from Georgia.</Bio>
+
+                    <LightText>
+                        {
+                            "A profession software developer. Loves to add clarity to complicated concepts by design."
+                        }
+                    </LightText>
+                </BioContainer>
+            </IntroContainer>
+            <Works/>
+        </Container>
     );
 }
 
-export default Home;
+const IntroContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    /* height: 100vh; */
+    @media (max-width: 767.98px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+`;
+
+const Container = styled.div``;
+
+const Name = styled.button`
+    justify-self: left;
+    padding-right: 50px;
+
+    &:active {
+    }
+
+    @media (max-width: 767.98px) {
+        display: None;
+    }
+`;
+
+const NameContainer = styled.div`
+    /* width: 300px */
+`;
+
+const BioContainer = styled.div`
+    /* width: 300px */
+`;
+const Bio = styled.div`
+    font-size: 30px;
+`;
+
+const LightText = styled.div`
+    opacity: 0.2;
+    font-size: 12px;
+    padding: 50px 0px;
+
+    @media (max-width: 767.98px) {
+        display: None;
+    }
+`;
+
+const LargeText = styled.div`
+    font-size: 80px;
+    line-height: 80px;
+    padding-top: 20%;
+`;
