@@ -1,8 +1,9 @@
 import React from "react";
+import styled from "styled-components";
 
 export default function Works() {
     return (
-        <div>
+        <WorkContainer>
             Works
             <div class="grid grid-cols-4 gap-x-4 gap-y-1 max-w-1xl">
                 {/* <!-- Title --> */}
@@ -40,6 +41,11 @@ export default function Works() {
                     </p>
                 </div>
             </div>
-        </div>
+        </WorkContainer>
     );
 }
+
+
+const WorkContainer = styled.div`
+    padding-top: 20%;
+`
