@@ -58,7 +58,7 @@ export default function Works(props) {
                             alt="name"
                         />
                     </a>
-                    <Description>
+                    <Description className="description">
                         <h1 class="title">{element[0]}</h1>
                     </Description>
                 </Content>

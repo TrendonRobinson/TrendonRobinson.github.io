@@ -1,16 +1,35 @@
+@font-face {
+    font-family: "latohairline";
+    src: url("./fonts/lato-hairline-webfont.woff2") format("woff2"),
+        url("./fonts/lato-hairline-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     /* margin: 25px 200px; */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: "latohairline", Arial, sans-serif;
 
     color: white;
     background-color: #2d3944;
-    /* background: linear-gradient(160deg, #ff7464, #ff1c00); */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+    position: absolute;
+    opacity: 0.2;
+    background-image: url("./Images/carbon_fibre.png");
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 @media (max-width: 767.98px) {

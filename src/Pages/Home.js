@@ -1,10 +1,13 @@
 import { style } from "@mui/system";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import "../App.css"
+import "../App.scss"
 
 // Sections
 import Works from "../Components/Works";
+
+// Comp
+import Nav from '../Components/Nav'
 
 export default function Home() {
     const [display, setDisplay] = useState(false)
@@ -26,6 +29,7 @@ export default function Home() {
 
     return (
         <Container className="Home">
+            <Nav classes={`${works ? 'show' : 'hide'}`}/>
             <GetStarted onClick={Display} className={`Started ${display ? 'hidden' : ''} ${works ? 'hide' : ''}`}>
                 <Name>Trendon Robinson</Name>
                 <StartText>Click to get Started</StartText>
@@ -41,6 +45,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
     font-size: 5vw;
     @media (max-width: 767.98px){
@@ -50,10 +55,11 @@ const Container = styled.div`
 
 const Name = styled.div`
     line-height: normal;
-    font-weight: 100;
-    font-family: "Brush Script MT", 'Brush Script Std', cursive;
+    font-weight: 500;
+    /* font-family: "Brush Script MT", 'Brush Script Std', cursive; */
+    font-family: "latohairline", Arial, sans-serif;
     @media (min-width: 576px){
-    	font-size: 7vw
+    	font-size: 5vw
     }
 `;
 
