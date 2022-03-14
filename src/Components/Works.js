@@ -10,10 +10,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
 // import "./styles.css";
 
 // import required modules
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
 const projectsInfo = [
     [
@@ -39,13 +40,12 @@ export default function Works(props) {
     const displayText = "";
     const n = 2;
 
-    useEffect(() => {
-        console.log(transition);
-    }, [transition]);
+    useEffect(() => {}, [transition]);
 
     const pagination = {
         clickable: true,
-        renderBullet: function (index, className) {
+        // bulletClass: "bullet",
+        renderBullet: function (index, className, test) {
             return (
                 '<button class="' + className + '">' + (index + 1) + "</button>"
             );
@@ -64,7 +64,9 @@ export default function Works(props) {
                         />
                     </a>
                     <Description className="description">
-                        <h1 class="title">{element[0]}</h1>
+                        <h1 style={{ opacity: ".5" }} class="title">
+                            {element[0]}
+                        </h1>
                     </Description>
                 </Content>
             </SwiperSlide>
@@ -95,8 +97,9 @@ export default function Works(props) {
         <WorkContainer className={classes}>
             <Swiper
                 pagination={pagination}
+                navigation
                 spaceBetween={50}
-                modules={[Pagination]}
+                modules={[Pagination, Navigation]}
                 slidesPerView={1}
                 onSlideChange={onChange}
                 onSwiper={(swiper) => console.log(swiper)}

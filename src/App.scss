@@ -135,6 +135,30 @@ img {
     /* content: "1"; */
 }
 
-.active {
+.swiper-button-next {
+    background-color: white;
+    border-radius: 50px;
+    padding: 30px;
+    &::after {
+        color: black;
+    }
+}
+.swiper-button-prev {
+    background-color: white;
+    border-radius: 50px;
+    padding: 30px;
+    &::after {
+        color: black;
+    }
+}
+
+.activeDot {
     color: yellow;
+}
+
+.Contact,
+.About {
+    @media (max-width: 767.98px) {
+        margin: 25px 50px;
+    }
 }

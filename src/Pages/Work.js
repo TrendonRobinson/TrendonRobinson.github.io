@@ -5,7 +5,9 @@ import Works from "../Components/Works";
 export default function Work(props) {
     const { works, setWorks } = props;
     useEffect(() => {
-        setWorks(true);
+        if (!works) {
+            setWorks(true);
+        }
     }, [works]);
 
     return (

@@ -31,13 +31,6 @@ body {
     height: 100%;
     z-index: -1;
 }
-
-@media (max-width: 767.98px) {
-    body {
-        margin: 25px 50px;
-    }
-}
-
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;

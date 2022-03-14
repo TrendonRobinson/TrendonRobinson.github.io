@@ -5,6 +5,7 @@ import { Routes, Route, useRoutes } from "react-router-dom";
 import Home from "./Pages/Home.js";
 import Work from "./Pages/Work";
 import About from "./Pages/About";
+import Contacts from "./Pages/Contacts";
 
 import Nav from "./Components/Nav";
 
@@ -24,7 +25,16 @@ export default function App() {
                     path="/works"
                     element={<Work works={works} setWorks={setWorks} />}
                 />
-                <Route exact path="/about" element={<About />} />
+                <Route
+                    exact
+                    path="/about"
+                    element={<About works={works} setWorks={setWorks} />}
+                />
+                <Route
+                    exact
+                    path="/contacts"
+                    element={<Contacts works={works} setWorks={setWorks} />}
+                />
             </Routes>
         </div>
     );

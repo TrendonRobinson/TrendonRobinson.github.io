@@ -15,20 +15,34 @@ export default function Nav(props) {
                         to="/works"
                         activeClassName="active"
                         className={({ isActive }) =>
-                            isActive ? "active" : "inactive"
+                            isActive ? "activeDot" : "inactive"
                         }
                     >
                         .
                     </Link>
                 </Item>
                 <Item href="/about">
-                    <Link to="/about" activeClassName="active">
-                        About.
+                    About
+                    <Link
+                        to="/about"
+                        activeClassName="active"
+                        className={({ isActive }) =>
+                            isActive ? "activeDot" : "inactive"
+                        }
+                    >
+                        .
                     </Link>
                 </Item>
                 <Item href="/contacts">
-                    <Link to="/contacts" activeClassName="active">
-                        Contacts.
+                    Contacts
+                    <Link
+                        to="/contacts"
+                        activeClassName="active"
+                        className={({ isActive }) =>
+                            isActive ? "activeDot" : "inactive"
+                        }
+                    >
+                        .
                     </Link>
                 </Item>
             </Links>
@@ -51,7 +65,7 @@ const NavContainer = styled.div`
     @media (max-width: 767.98px) {
         /* align-items: flex-end; */
         /* padding: 0px 20px; */
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
 `;
 
@@ -73,10 +87,6 @@ const Item = styled.a`
     justify-self: left;
     padding-right: 10px;
     font-size: 15px;
-
-    &:active {
-        color: blue;
-    }
 
     @media (max-width: 767.98px) {
         justify-self: auto;
