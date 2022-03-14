@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import styled from "styled-components";
 
 // Components
@@ -16,27 +17,31 @@ import { EffectCoverflow, Pagination } from "swiper";
 
 const projectsInfo = [
     [
-        'Quirkymals', 
-        'https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png'
+        "Quirkymals",
+        "https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png",
     ],
     [
-        'Quirkymals', 
-        'https://i.ibb.co/fdKbG9j/Screen-Shot-2022-03-11-at-4-58-28-AM.png'
+        "Other Name",
+        "https://i.ibb.co/fdKbG9j/Screen-Shot-2022-03-11-at-4-58-28-AM.png",
     ],
+    ["Vocab Builder", "https://i.ibb.co/xJ3x1KX/Vocab-Builder2.png"],
     [
-        'Quirkymals', 
-        'https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png'
+        "Chaos",
+        "https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png",
     ],
-    [
-        'Quirkymals', 
-        'https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png'
-    ],
-    
-    
 ];
 
 export default function Works(props) {
     const { classes } = props;
+    const [index, setIndex] = useState(0);
+    const [transition, setTransition] = useState(false);
+    const [display, setDisplay] = useState(true);
+    const displayText = "";
+    const n = 2;
+
+    useEffect(() => {
+        console.log(transition);
+    }, [transition]);
 
     const pagination = {
         clickable: true,
@@ -51,9 +56,9 @@ export default function Works(props) {
         return (
             <SwiperSlide>
                 <Content class="col-span-2">
-                    <a href="link">
+                    <a href="/">
                         <img
-                            src={element[1]}//
+                            src={element[1]} //
                             class="rounded-xl brightness-75"
                             alt="name"
                         />
@@ -66,6 +71,26 @@ export default function Works(props) {
         );
     });
 
+    function repeatText(element) {
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            arr.push(element);
+        }
+        return arr;
+    }
+
+    function onChange({ activeIndex: _index }) {
+        setDisplay(false);
+        setTransition(true);
+        setIndex(_index);
+        setTimeout(() => {
+            setDisplay(true);
+        }, 5);
+        setTimeout(() => {
+            setTransition(false);
+        }, 1000 / 1.5);
+    }
+
     return (
         <WorkContainer className={classes}>
             <Swiper
@@ -73,11 +98,33 @@ export default function Works(props) {
                 spaceBetween={50}
                 modules={[Pagination]}
                 slidesPerView={1}
-                onSlideChange={() => console.log("slide change")}
+                onSlideChange={onChange}
                 onSwiper={(swiper) => console.log(swiper)}
             >
                 {projects}
             </Swiper>
+            {isMobile ? (
+                ""
+            ) : (
+                <BackGroundText
+                    className={transition ? "transition" : ""}
+                    style={
+                        transition
+                            ? {
+                                  transition: 0,
+                                  opacity: 0,
+                                  display: display ? "block" : "none",
+                              }
+                            : {
+                                  transitionDelay: "0.25s",
+                                  transition: "0.5s",
+                                  opacity: "1",
+                              }
+                    }
+                >
+                    {repeatText(projectsInfo[index][0])}
+                </BackGroundText>
+            )}
         </WorkContainer>
     );
 }
@@ -89,21 +136,16 @@ const WorkContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-direction: row; */
 `;
 
 const Content = styled.div`
-    /* display: flex;
-    flex-direction: row; */
-
     img {
         width: 600px;
         height: auto;
     }
 
-
     h5 {
-        font-size: 10px
+        font-size: 10px;
     }
 `;
 
@@ -112,9 +154,26 @@ const Description = styled.div`
     transform: translate(-30%, -225%);
     font-weight: 700;
     font-size: 70px;
-    /* margin: 0px 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 200px; */
+`;
+
+const BackGroundText = styled.div`
+    height: 40vh;
+    width: 200%;
+    position: absolute;
+    /* align-self: center;
+    justify-self: center;
+    transform: translateY(-22vw); */
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15vw;
+    font-weight: bolder;
+    word-break: break-all;
+    color: rgba(255, 255, 255, 0.05);
+    text-align: left;
+
+    @media (min-width: 576px) {
+        transform: translateY(-10vh);
+    }
 `;

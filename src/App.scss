@@ -78,6 +78,15 @@ img {
         transition: 0.5s;
         transform: translateY(30%);
     }
+    @media (max-width: 767.98px) {
+        h1 {
+            font-size: 50px;
+            opacity: 1;
+            transition: 0.5s;
+            transition-delay: 250ms;
+            transform: translateY(10%);
+        }
+    }
 }
 
 .swiper-slide-active {
@@ -124,4 +133,8 @@ img {
 
 .swiper-pagination-bullet-active::before {
     /* content: "1"; */
+}
+
+.active {
+    color: yellow;
 }

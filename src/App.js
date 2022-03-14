@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Routes, Route, useRoutes } from "react-router-dom";
 
 import Home from "./Pages/Home.js";
+import Work from "./Pages/Work";
+import About from "./Pages/About";
+
+import Nav from "./Components/Nav";
 
 export default function App() {
+    const [works, setWorks] = useState(false);
     return (
-        // <div>
-        //   <div className='background'></div>
-
-        // </div>
-        <Routes>
-            <Route exact path="/" element={<Home />} />
-        </Routes>
+        <div>
+            <Nav classes={`${works ? "show" : "hide"}`} />
+            <Routes>
+                <Route
+                    exact
+                    path="/"
+                    element={<Home works={works} setWorks={setWorks} />}
+                />
+                <Route
+                    exact
+                    path="/works"
+                    element={<Work works={works} setWorks={setWorks} />}
+                />
+                <Route exact path="/about" element={<About />} />
+            </Routes>
+        </div>
     );
 }
