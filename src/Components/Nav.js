@@ -9,42 +9,33 @@ export default function Nav(props) {
         <NavContainer className={`Nav ${classes}`}>
             <Logo>T-R</Logo>
             <Links>
-                <Item href="/works">
-                    Projects
-                    <Link
-                        to="/works"
-                        activeClassName="active"
-                        className={({ isActive }) =>
-                            isActive ? "activeDot" : "inactive"
-                        }
-                    >
-                        .
-                    </Link>
-                </Item>
-                <Item href="/about">
-                    About
-                    <Link
-                        to="/about"
-                        activeClassName="active"
-                        className={({ isActive }) =>
-                            isActive ? "activeDot" : "inactive"
-                        }
-                    >
-                        .
-                    </Link>
-                </Item>
-                <Item href="/contacts">
-                    Contacts
-                    <Link
-                        to="/contacts"
-                        activeClassName="active"
-                        className={({ isActive }) =>
-                            isActive ? "activeDot" : "inactive"
-                        }
-                    >
-                        .
-                    </Link>
-                </Item>
+                <Link
+                    to="/works"
+                    activeClassName="active"
+                    className={({ isActive }) =>
+                        isActive ? "activeDot" : "inactive"
+                    }
+                >
+                    Work<span>.</span>
+                </Link>
+                <Link
+                    to="/about"
+                    activeClassName="active"
+                    className={({ isActive }) =>
+                        isActive ? "activeDot" : "inactive"
+                    }
+                >
+                    About<span>.</span>
+                </Link>
+                <Link
+                    to="/contact"
+                    activeClassName="active"
+                    className={({ isActive }) =>
+                        isActive ? "activeDot" : "inactive"
+                    }
+                >
+                    Contact<span>.</span>
+                </Link>
             </Links>
         </NavContainer>
     );
@@ -58,7 +49,7 @@ const NavContainer = styled.div`
     align-items: center;
     padding: 0px 80px;
     padding-top: 50px;
-    padding-bottom: 70px;
+    padding-bottom: 20px;
 
     width: 100vw;
 
@@ -81,6 +72,18 @@ const Logo = styled.div`
 const Links = styled.div`
     display: flex;
     justify-content: center;
+    /* a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+        line-height: 0px;
+        span {
+            font-size: 75px;
+            line-height: 0;
+        }
+    } */
 `;
 
 const Item = styled.a`

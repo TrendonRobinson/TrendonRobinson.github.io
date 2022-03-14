@@ -32,7 +32,7 @@ export default function App() {
                 />
                 <Route
                     exact
-                    path="/contacts"
+                    path="/contact"
                     element={<Contacts works={works} setWorks={setWorks} />}
                 />
             </Routes>
