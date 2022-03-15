@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 import styled from "styled-components";
 
@@ -15,20 +16,28 @@ import "swiper/css/navigation";
 
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+const projectsJson = require("../Json/projectInfo.json");
 
 const projectsInfo = [
     [
         "Quirkymals",
         "https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png",
+        "",
     ],
     [
         "Other Name",
         "https://i.ibb.co/fdKbG9j/Screen-Shot-2022-03-11-at-4-58-28-AM.png",
+        "",
     ],
-    ["Vocab Builder", "https://i.ibb.co/xJ3x1KX/Vocab-Builder2.png"],
+    [
+        "Vocab Builder",
+        "https://i.ibb.co/xJ3x1KX/Vocab-Builder2.png",
+        "https://trendonrobinson.github.io/React-app/",
+    ],
     [
         "Chaos",
         "https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png",
+        "",
     ],
 ];
 
@@ -52,20 +61,20 @@ export default function Works(props) {
         },
     };
 
-    const projects = projectsInfo.map((element, index) => {
+    const projects = projectsJson.map((element, index) => {
         return (
             <SwiperSlide>
                 <Content class="col-span-2">
-                    <a href="/">
+                    <Link to={`/${element.route}`}>
                         <img
-                            src={element[1]} //
+                            src={element.image} //
                             class="rounded-xl brightness-75"
                             alt="name"
                         />
-                    </a>
+                    </Link>
                     <Description className="description">
                         <h1 style={{ opacity: ".5" }} class="title">
-                            {element[0]}
+                            {element.title}
                         </h1>
                     </Description>
                 </Content>
@@ -125,7 +134,7 @@ export default function Works(props) {
                               }
                     }
                 >
-                    {repeatText(projectsInfo[index][0])}
+                    <h1>{repeatText(projectsInfo[index][0])}</h1>
                 </BackGroundText>
             )}
         </WorkContainer>
@@ -160,23 +169,49 @@ const Description = styled.div`
 `;
 
 const BackGroundText = styled.div`
-    height: 40vh;
-    width: 200%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    /* align-self: center;
-    justify-self: center;
-    transform: translateY(-22vw); */
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 15vw;
-    font-weight: bolder;
-    word-break: break-all;
-    color: rgba(255, 255, 255, 0.05);
     text-align: left;
+    line-height: 100%;
+    font-weight: bolder;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.05);
 
-    @media (min-width: 576px) {
-        transform: translateY(-10vh);
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+
+    align-self: center;
+    justify-self: center;
+    @media (max-width: 767.98px) {
+        font-size: 30vw;
     }
 `;
+
+// const BackGroundText = styled.div`
+//     height: 40vh;
+//     width: 200%;
+//     position: absolute;
+//     /* align-self: center;
+//     justify-self: center;
+//     transform: translateY(-22vw); */
+//     left: 0;
+//     right: 0;
+//     margin-left: auto;
+//     margin-right: auto;
+//     font-size: 15vw;
+//     font-weight: bolder;
+//     word-break: break-all;
+//     color: rgba(255, 255, 255, 0.05);
+//     text-align: left;
+
+//     @media (min-width: 576px) {
+//         transform: translateY(-10vh);
+//     }
+// `;

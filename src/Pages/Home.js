@@ -18,6 +18,10 @@ export default function Home(props) {
             setTimeout(() => {
                 setWorks(true);
             }, 1000 / 1.5);
+        } else {
+            setTimeout(() => {
+                setDisplay(true);
+            }, 2000);
         }
     }, [display]);
 
@@ -35,7 +39,7 @@ export default function Home(props) {
                 }`}
             >
                 <Name>Trendon Robinson</Name>
-                <StartText>Click to get Started</StartText>
+                <StartText>Welcome</StartText>
             </GetStarted>
             <Works classes={`${works ? "show" : "hide"}`} />
         </Container>
