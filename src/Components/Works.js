@@ -18,29 +18,6 @@ import "swiper/css/navigation";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 const projectsJson = require("../Json/projectInfo.json");
 
-const projectsInfo = [
-    [
-        "Quirkymals",
-        "https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png",
-        "",
-    ],
-    [
-        "Other Name",
-        "https://i.ibb.co/fdKbG9j/Screen-Shot-2022-03-11-at-4-58-28-AM.png",
-        "",
-    ],
-    [
-        "Vocab Builder",
-        "https://i.ibb.co/xJ3x1KX/Vocab-Builder2.png",
-        "https://trendonrobinson.github.io/React-app/",
-    ],
-    [
-        "Chaos",
-        "https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png",
-        "",
-    ],
-];
-
 export default function Works(props) {
     const { classes } = props;
     const [index, setIndex] = useState(0);
@@ -134,7 +111,7 @@ export default function Works(props) {
                               }
                     }
                 >
-                    <h1>{repeatText(projectsInfo[index][0])}</h1>
+                    <h1>{repeatText(projectsJson[index].title)}</h1>
                 </BackGroundText>
             )}
         </WorkContainer>

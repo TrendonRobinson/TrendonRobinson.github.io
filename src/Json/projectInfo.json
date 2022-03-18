@@ -7,13 +7,6 @@
         "description": "Welcome to Quirkymals! With this multiplayer mash-up of aspects from your all-time favorite childhood games, you can personalize your favorite animal, hang out in countless fun locations, unravel mysteries, and compete with friends. Experience dozens of unique and challenging mini-games to earn coins for skins and other collectibles!"
     },
     {
-        "title": "Other Name",
-        "route": "other-name",
-        "image": "https://i.ibb.co/fdKbG9j/Screen-Shot-2022-03-11-at-4-58-28-AM.png",
-        "url": "",
-        "description": ""
-    },
-    {
         "title": "Vocab Builder",
         "route": "vocab-builder",
         "image": "https://i.ibb.co/xJ3x1KX/Vocab-Builder2.png",
@@ -21,9 +14,16 @@
         "description": ""
     },
     {
-        "title": "Chaos",
-        "route": "chaos",
-        "image": "https://tr.rbxcdn.com/b23f9987561066b3b92c7c77ed9fb413/768/432/Image/Png",
+        "title": "Social App",
+        "route": "social-app",
+        "image": "https://i.ibb.co/1LvFPr5/Social-App.png",
+        "url": "https://github.com/TrendonRobinson/social-app",
+        "description": "Social App was created using MongoDB, ExpressJS, ReactJS, NodeJS & Graphql aka (MERNG) Stack and has the simple features of singing up, singing in, and making a post. This project was made to get comfortable user-authentication, post request and other methods using a different tech stack."
+    },
+    {
+        "title": "Other Name",
+        "route": "other-name",
+        "image": "https://i.ibb.co/fdKbG9j/Screen-Shot-2022-03-11-at-4-58-28-AM.png",
         "url": "",
         "description": ""
     }
