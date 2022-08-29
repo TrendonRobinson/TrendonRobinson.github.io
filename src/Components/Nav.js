@@ -53,25 +53,38 @@ const NavContainer = styled.div`
 
     width: 100vw;
 
-    @media (max-width: 767.98px) {
-        /* align-items: flex-end; */
-        /* padding: 0px 20px; */
-        /* justify-content: space-between; */
+    @media (max-width: 415px) {
+        justify-content: center;
     }
 `;
 
 const Logo = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 45px;
     font-family: "latohairline", Arial, sans-serif;
     font-size: 20px;
     font-weight: 900;
     border: 1px solid #fff;
     /* margin-right: 80vw; */
     padding: 5px 5px;
+
+    @media (max-width: 415px) {
+        display: none;
+    }
 `;
 
 const Links = styled.div`
     display: flex;
     justify-content: center;
+    z-index: 4;
+
+    min-height: 40px;
+    > a {
+        min-height: 100%;
+        z-index: 10;
+    }
     /* a {
         display: flex;
         flex-direction: column;

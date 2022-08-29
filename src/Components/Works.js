@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
+// import "swiper/css/navigation";
 // import "./styles.css";
 
 // import required modules
@@ -42,6 +42,9 @@ export default function Works(props) {
         return (
             <SwiperSlide>
                 <Content class="col-span-2">
+                    <Title className="slide-title">
+                        <h2>{element.title}</h2>
+                    </Title>
                     <Link to={`/${element.route}`}>
                         <img
                             src={element.image} //
@@ -135,6 +138,12 @@ const Content = styled.div`
 
     h5 {
         font-size: 10px;
+    }
+`;
+
+const Title = styled.div`
+    @media (min-width: 767.98px) {
+        /* display: none; */
     }
 `;
 

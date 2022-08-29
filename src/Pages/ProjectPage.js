@@ -45,7 +45,7 @@ const ProjectContainer = styled.div`
     div {
         display: flex;
         justify-content: center;
-        padding-bottom: 20px;
+        /* margin-bottom: 20px; */
         /* align-items: center; */
     }
 
@@ -83,8 +83,9 @@ const Button = styled.a`
     justify-content: center;
     align-items: center;
 
-    /* width: 150px;
-    height: 60px; */
+    /* width: 150px;*/
+    /* height: 60px; */
+    margin-top: 10px;
     text-align: center;
     padding: 10px 25px;
 

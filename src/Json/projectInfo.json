@@ -7,6 +7,13 @@
         "description": "Welcome to Quirkymals! With this multiplayer mash-up of aspects from your all-time favorite childhood games, you can personalize your favorite animal, hang out in countless fun locations, unravel mysteries, and compete with friends. Experience dozens of unique and challenging mini-games to earn coins for skins and other collectibles!"
     },
     {
+        "title": "Sunsilk City",
+        "route": "sunsilk",
+        "image": "https://tr.rbxcdn.com/af814c56d9563ba5ffe818ae8c8d4774/768/432/Image/Png",
+        "url": "https://www.roblox.com/games/9746160797/Sunsilk-City",
+        "description": "Explore SUNSILK City, a world where nothing holds you back! 🎮 Play fun mini-games, 👩‍🦰 customize your avatar, and 📚 learn something new in the House of Skills. Whatever your ambition, a new world is waiting for you! ✨\n💇Customize your avatar with thousands of hairstyle combinations in House of Hair.\n ✂️Run your own hair salon in Salonista.\n🏁Race your friends on the ground in Sidewalk Superstars.\n🌤️Chase your dreams by flying high in the sky in Dreamcatcher.\n💨Fight angry clouds in Blow Them Away.📚Discover a range of online courses in House of Skills!"
+    },
+    {
         "title": "Vocab Builder",
         "route": "vocab-builder",
         "image": "https://i.ibb.co/xJ3x1KX/Vocab-Builder2.png",
@@ -19,12 +26,5 @@
         "image": "https://i.ibb.co/1LvFPr5/Social-App.png",
         "url": "https://github.com/TrendonRobinson/social-app",
         "description": "Social App was created using MongoDB, ExpressJS, ReactJS, NodeJS & Graphql aka (MERNG) Stack and has the simple features of singing up, singing in, and making a post. This project was made to get comfortable user-authentication, post request and other methods using a different tech stack."
-    },
-    {
-        "title": "Other Name",
-        "route": "other-name",
-        "image": "https://i.ibb.co/fdKbG9j/Screen-Shot-2022-03-11-at-4-58-28-AM.png",
-        "url": "",
-        "description": ""
     }
 ]
