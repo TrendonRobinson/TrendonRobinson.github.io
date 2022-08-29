@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c9574192.css",
-    "main.js": "/static/js/main.072640b9.js",
+    "main.css": "/static/css/main.d4393b30.css",
+    "main.js": "/static/js/main.6321591c.js",
     "static/js/787.9b9c0edf.chunk.js": "/static/js/787.9b9c0edf.chunk.js",
     "static/media/lato-hairline-webfont.woff": "/static/media/lato-hairline-webfont.20d58ac507817a07eb1c.woff",
     "static/media/lato-hairline-webfont.woff2": "/static/media/lato-hairline-webfont.0bc2b2c8171bbdba4c7c.woff2",
     "index.html": "/index.html",
-    "main.c9574192.css.map": "/static/css/main.c9574192.css.map",
-    "main.072640b9.js.map": "/static/js/main.072640b9.js.map",
+    "main.d4393b30.css.map": "/static/css/main.d4393b30.css.map",
+    "main.6321591c.js.map": "/static/js/main.6321591c.js.map",
     "787.9b9c0edf.chunk.js.map": "/static/js/787.9b9c0edf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9574192.css",
-    "static/js/main.072640b9.js"
+    "static/css/main.d4393b30.css",
+    "static/js/main.6321591c.js"
   ]
 }
